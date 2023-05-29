@@ -69,17 +69,5 @@ module.exports = {
         statusCode: 400,
         message: "Something went wrong",
       });
-    },
-    getAge(dateString) {
-      // console.log(dateString +'------>')
-      var today = new Date();
-      var birthDate = new Date(dateString);
-      console.log("birthday"+birthDate)
-      var age = today.getFullYear() - birthDate.getFullYear();
-      var m = today.getMonth() - birthDate.getMonth();
-      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-          age--;
-      }
-      return age;
-  }
+    }
   };
